@@ -5,6 +5,8 @@ permissions:
   checks: write
   contents: write
   pull-requests: write
+  actions: read
+  security-events: write
 
 jobs:
   terraform_security_scan:
