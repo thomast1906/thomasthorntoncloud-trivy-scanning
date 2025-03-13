@@ -20,7 +20,7 @@ jobs:
           scan-ref: 'terraform'  # Path to your Terraform files  
           format: 'sarif'
           scanners: 'vuln,secret,misconfig'
-          severity: 'CRITICAL,HIGH,MEDIUM'  
+          severity: 'CRITICAL,HIGH,MEDIUM,LOW,UNKNOWN'  
           exit-code: 0
           output: 'trivy-terraform-results.sarif'  
 
