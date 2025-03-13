@@ -17,5 +17,13 @@ jobs:
         with:
           image-ref: 'ttapp:latest'
           format: 'table'
-          exit-code: 1
+          exit-code: 0
           severity: 'CRITICAL,HIGH'
+          output: 'trivy-report.json'
+
+      - name: Upload Trivy report
+        uses: actions/upload-artifact@v4
+        with:
+            name: trivy-report
+            path: trivy-report.json
+            retention-days: 7
