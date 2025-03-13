@@ -1,8 +1,11 @@
-name: Trivy Security Scan
+name: Trivy Docker Security Scan
 on: [push, pull_request]
 
+permissions:
+  checks: write
+
 jobs:
-  security_scan:
+  docker_security_scan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
