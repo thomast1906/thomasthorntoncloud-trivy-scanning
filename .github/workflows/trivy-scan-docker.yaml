@@ -2,9 +2,6 @@ name: Trivy Docker Security Scan
 on: [push, pull_request]
 
 permissions:
-  checks: write
-  contents: write
-  pull-requests: write
   actions: read
   security-events: write
 
