@@ -16,13 +16,13 @@ jobs:
         uses: aquasecurity/trivy-action@0.29.0
         with:
           image-ref: 'ttapp:latest'
-          format: 'table'
+          format: 'sarif'
           exit-code: 0
           severity: 'CRITICAL,HIGH'
-          output: 'trivy-results.json'
+          output: 'trivy-results.sarif'
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v3
         with:
-            sarif_file: 'trivy-results.json'
+            sarif_file: 'trivy-results.sarif'
   
