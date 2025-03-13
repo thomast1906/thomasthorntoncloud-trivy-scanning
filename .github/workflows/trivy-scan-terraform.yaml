@@ -13,11 +13,12 @@ jobs:
       
       
       - name: Scan Terraform  
-        uses: aquasecurity/trivy-action@latest  
+        uses: aquasecurity/trivy-action@0.29.0
         with:  
-          scan-type: 'config'  
+          scan-type: 'fs'  
           scan-ref: './terraform'  # Path to your Terraform files  
           format: 'sarif'  
+          exit-code: 0
           output: 'trivy-terraform-results.sarif'  
 
       - name: Upload Trivy scan results to GitHub Security tab
