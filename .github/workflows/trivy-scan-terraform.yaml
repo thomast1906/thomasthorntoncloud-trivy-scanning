@@ -14,7 +14,7 @@ jobs:
       
       
       - name: Scan Terraform  
-        uses: aquasecurity/trivy-action@0.29.0
+        uses: aquasecurity/trivy-action@0.30.0
         with:  
           scan-type: 'fs'  
           scan-ref: 'terraform/'  # Path to your Terraform files  
